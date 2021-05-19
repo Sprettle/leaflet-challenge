@@ -89,10 +89,11 @@ function createMap(earthquakes) {
 
     // Create map with 2 layers: lightMap and earthquakes
     var myMap = L.map("map", {
-        center: [40.7, -73.95],
-        zoom: 5,
-        layers: [lightMap, earthquakes]
+        center: [40.7, -94.5],
+        zoom: 2,
     });
+
+    lightMap.addTo(myMap);
 
     //Add legend 'template' to myMap
     var legend = L.control({position:"bottomright"});
@@ -125,6 +126,4 @@ function createMap(earthquakes) {
     };
     
     legend.addTo(myMap);
-
 };
-
